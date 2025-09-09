@@ -1,0 +1,585 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins, sans-serif;
+}
+
+/* ---------- Header ----------*/
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 60px;
+  background: #fff;
+  font-family: poppins, sans-serif;
+
+  /* Código para deixar fixo */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+
+}
+
+.logo img{
+    height: 40px;
+}
+
+.logo h1 {
+  font-size: 20px;
+  color: #275965;
+  font-weight: bold;
+}
+
+/* Nav */
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.navbar .nav-links a {
+  text-decoration: none;
+  color: #275965;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Efeito Link */
+.navbar .nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background-color: #E870A4;
+  transition: width 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+  color: #E870A4;
+}
+
+.navbar .nav-links a:hover::after,
+.navbar .nav-links a:focus::after{
+  width: 100%;
+}
+
+/* Botão Contato */
+.contact-header .button-contact {
+  padding: 5px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.8s ease;
+  color: #275965;
+  border: 2px solid transparent;
+
+  /* Borda em degradê + fundo branco inicial */
+  background: 
+    linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(to right, #FFC3DF, #AAD2E9) border-box;
+}
+
+/* Hover */
+.contact-header .button-contact:hover {
+  background: 
+    linear-gradient(#FFEFF7, #FFEFF7) padding-box,
+    linear-gradient(to right, #FFC3DF, #AAD2E9) border-box;
+}
+
+/* ---------- Banner ---------- */
+.banner{
+    margin-top: 80px;
+}
+
+/* ---------- Depoimentos ---------- */
+.testimonials {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to top, #e5f5ff, #ffffff);
+}
+
+.testimonials h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #6CAEDB;
+  margin-bottom: 8px;
+}
+
+.testimonials p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.feedback {
+  display: flex;
+  justify-content: center;
+  gap: 45px;
+  flex-wrap: wrap;
+}
+
+.feedback-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 25px 20px;
+  width: 280px;
+  height: 350px;
+  text-align: center;
+  border: #e2e2e2 solid 1px;
+  transition: transform 0.3s ease;
+}
+
+.feedback-card .img-feedback{
+    width: 100px;
+}
+
+.feedback-card:hover {
+  transform: translateY(-5px);
+}
+
+.feedback-card h4 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.star {
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+  margin-bottom: 12px;
+}
+
+.star img {
+  width: 18px;
+  height: 18px;
+}
+
+.feedback-card p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* Footer do depoimento */
+.testimonials > p:last-of-type {
+  font-size: 16px;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.testimonials button {
+  background: #FFD97A;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 25px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.testimonials button:hover {
+  background: #ffc94c;
+}
+
+/* ---------- Contato ---------- */
+.contact {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background-image: url('../img/fundo-contato.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.content-contact {
+  background: #fff;
+  border: 3px solid transparent;
+  border-radius: 100px 0px 100px 0px;
+  padding: 40px;
+  width: 500px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  z-index: 2;
+
+  background: 
+    linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(to right, #FFC3DF, #AAD2E9) border-box;
+}
+
+.content-contact .img-fixado {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+}
+
+.content-contact h2 {
+  font-size: 34px;
+  color: #275965;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.content-contact p {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+/* Formulário */
+.content-contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.content-contact input,
+.content-contact textarea {
+  border: 1px solid #AAD2E9;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 14px;
+  outline: none;
+  background-color: #F9F9F9;
+}
+
+.content-contact textarea {
+  resize: none;
+  min-height: 100px;
+}
+
+/* Botão Enviar */
+.content-contact button {
+  background: #FFE5A3;
+  color: #275965;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  width: 70%;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.6s ease;
+}
+
+.content-contact button:hover {
+  background: #FFD97A;
+}
+
+/* Botão WhatsApp */
+.contact-whatsapp {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.contact-whatsapp a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;          
+  gap: 8px;                     
+  background: #25d366;
+  color: #fff;
+  border-radius: 25px;          
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.6s ease;
+}
+
+.contact-whatsapp a .img-contact {
+  width: 18px;
+  height: 18px;
+}
+
+.contact-whatsapp a:hover {
+  background: #1ebe5d;
+}
+
+.contact .img-conversa {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 350px;
+  z-index: 1;
+}
+
+/* ---------- Footer ---------- */
+
+/* Linha rosa */
+.line-pink {
+  height: 10px;
+  background-color: #FFC3DF;
+  margin-bottom: 30px;
+}
+
+footer {
+  background: #fff;
+  color: #275965;
+  font-family: poppins, sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 40px 80px;
+  flex-wrap: wrap;
+}
+
+/* Coluna 1 - Info */
+.footer-info h2 {
+  font-size: 35px;
+  font-weight: 600;
+  margin-bottom: 50px;
+  color: #275965;
+}
+
+.footer-info .info-links {
+  list-style: none;
+}
+
+.footer-info .info-links li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer-info .info-links li img {
+  width: 18px;
+  height: auto;
+}
+
+.footer-info .info-links li:hover {
+  color: #E870A4;
+}
+
+/* Coluna 2 - Menu */
+.footer-nav h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  color: #275965;
+  font-weight: 600;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #275965;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #E870A4;
+}
+
+/* Coluna 3 - Social e Newsletter */
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+.footer-social h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  color: #275965;
+  text-align: center;
+}
+
+.footer-social a img {
+  width: 30px;
+  margin: 5px;
+  transition: transform 0.3s ease;
+}
+
+.footer-social a img:hover {
+  transform: scale(1.1);
+}
+
+/* Newsletter */
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.newsletter h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #275965;
+}
+
+.newsletter-button {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 300px;
+}
+
+.newsletter-button input {
+  flex: 1;
+  padding: 8px 13px;
+  font-size: 16px;
+  border: 2px solid #AAD2E9;
+  border-right: none;
+  background-color: #F9F9F9;
+  border-radius: 25px 0 0 25px;
+  outline: none;
+}
+
+.newsletter-button button {
+  background-color: #AAD2E9;
+  color: #fff;
+  border: 1px solid #AAD2E9;
+  border-radius: 0 25px 25px 0;
+  padding: 8px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+}
+
+.newsletter-button button:hover {
+  background-color: #90c4e0;
+}
+
+.newsletter p {
+  font-size: 14px;
+  color: #275965;
+  margin-top: 5px;
+}
+
+/* Rodapé inferior */
+.restricted {
+  text-align: center;
+  padding: 15px;
+  background: #f6f6f6;
+  font-size: 12px;
+  color: #275965;
+  margin-top: 30px;
+}
+
+/* ---------- Responsividade ---------- */
+@media (max-width: 1024px) {
+  .footer-content {
+    padding: 40px 40px;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 924px) {
+  .footer-content {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    gap: 20px;
+  }
+
+  .footer-container {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .newsletter {
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px 20px;
+    gap: 30px;
+  }
+
+  .footer-info h2 {
+    margin-bottom: 25px;
+    font-size: 28px;
+  }
+
+  .footer-nav h3,
+  .footer-social h3,
+  .newsletter h3 {
+    font-size: 18px;
+  }
+
+  .footer-container {
+    align-items: center;
+    text-align: center;
+  }
+
+  .newsletter {
+    align-items: center;
+    text-align: center;
+  }
+
+  .newsletter-button {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .newsletter-button input,
+  .newsletter-button button {
+    border-radius: 25px;
+    border-right: 2px solid #AAD2E9;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .newsletter-button button {
+    border: none;
+  }
+}
