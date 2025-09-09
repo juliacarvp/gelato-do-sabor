@@ -7,12 +7,15 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- About Header -->
     <header>
         <div class="logo">
-            <img src="assets/img/.png" alt="Logo Gelato do Sabor">
+            <img src="assets/img/logo.png" alt="Logo Gelato do Sabor">
             <h1>Gelato do Sabor</h1>
         </div>
 
@@ -27,9 +30,12 @@
             </nav>
         </div>
 
-        <div class="contact">
-            <button type="button">Contato</button>
+        <div class="contact-header">
+            <button class="button-contact" type="button">Contato</button>
         </div>
+
+        <!-- Ícone hamburguer -->
+        <div class="menu-toggle" style="display: none;">&#9776;</div>
     </header>
 
     <!-- About Home -->
@@ -224,7 +230,7 @@
 
         <div class="feedback">
             <div class="feedback-card">
-                <img src="assets/img/aspas.png" alt="">
+                <img class="img-feedback" src="assets/img/imagem-depoimentos.png" alt="">
                 <h4>Gisele Almeida</h4>
                 <div class="star">
                     <img src="assets/img/estrela-cor.png" alt="Estrela">
@@ -238,7 +244,7 @@
             </div>
 
             <div class="feedback-card">
-                <img src="assets/img/aspas.png" alt="">
+                <img class="img-feedback" src="assets/img/imagem-depoimentos.png" alt="">
                 <h4>Rosa Sebastiana</h4>
                 <div class="star">
                     <img src="assets/img/estrela-cor.png" alt="Estrela">
@@ -252,7 +258,7 @@
             </div>
 
             <div class="feedback-card">
-                <img src="assets/img/aspas.png" alt="">
+                <img class="img-feedback" src="assets/img/imagem-depoimentos.png" alt="">
                 <h4>Nilza Roberta</h4>
                 <div class="star">
                     <img src="assets/img/estrela-cor.png" alt="Estrela">
@@ -273,7 +279,7 @@
     <!-- About Contact -->
     <section id="contact" class="contact">
         <div class="content-contact">
-            <img src="assets/img/fixado.png" alt="Icone Fixado">
+            <img class="img-fixado" src="assets/img/fixado.png" alt="Icone Fixado">
             <h2>Fale Conosco</h2>
             <p>Estamos prontos para atender você!</p>
 
@@ -282,12 +288,22 @@
                 <input type="email" name="email" id="email" placeholder="E-mail">
                 <textarea name="text" id="text" placeholder="Mensagem"></textarea>
 
-                <button type="submit">Enviar</button>
+                <div class="button-form">
+                    <button type="submit">Enviar</button>
+                </div>
             </form>
 
             <p>Seus dados estão seguros conosco.</p>
-            <a href=""><img src="assets/img/whatsapp-branco.png" alt="">Peça pelo WhatsApp</a>
+
+            <div class="contact-whatsapp">
+                <a href="#">
+                    <img class="img-contact" src="assets/img/whatsapp-branco.png" alt="WhatsApp">
+                    Peça pelo WhatsApp
+                </a>
+            </div>
         </div>
+
+        <img class="img-conversa" src="assets/img/janela-de-conversa.png" alt="">
     </section>
 
     <!-- About Footer -->
@@ -320,14 +336,16 @@
                     <h3>Redes Sociais</h3>
 
                     <a href="#"><img src="assets/img/instagram.png" alt="Instagram"></a>
-                    <a href="#"><img src="assets/img/youtube.png" alt="YouTube"></a>
+                    <a href="#"><img src="assets/img/facebook.png" alt="Facebook"></a>
                     <a href="#"><img src="assets/img/whatsapp.png" alt="Whatsapp"></a>
                 </div>
 
                 <div class="newsletter">
                     <h3>Newsletter</h3>
-                    <input type="email" name="newsletter" id="newsletter" placeholder="Seu e-mail">
-                    <button type="submit">Assinar</button>
+                    <div class="newsletter-button">
+                        <input type="email" name="newsletter" id="newsletter" placeholder="Seu e-mail">
+                        <button type="submit">Assinar</button>
+                    </div>
                     <p>Inscreva-se para receber novidades e ofertas exclusivas!</p>
                 </div>
             </div>
