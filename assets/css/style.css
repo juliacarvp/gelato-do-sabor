@@ -22,7 +22,7 @@ header {
   left: 0;
   width: 100%;
   z-index: 1000;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
 /* Logo */
@@ -32,8 +32,8 @@ header {
 
 }
 
-.logo img{
-    height: 40px;
+.logo img {
+  height: 40px;
 }
 
 .logo h1 {
@@ -74,7 +74,7 @@ header {
 }
 
 .navbar .nav-links a:hover::after,
-.navbar .nav-links a:focus::after{
+.navbar .nav-links a:focus::after {
   width: 100%;
 }
 
@@ -90,21 +90,539 @@ header {
   border: 2px solid transparent;
 
   /* Borda em degradê + fundo branco inicial */
-  background: 
+  background:
     linear-gradient(#fff, #fff) padding-box,
     linear-gradient(to right, #FFC3DF, #AAD2E9) border-box;
 }
 
 /* Hover */
 .contact-header .button-contact:hover {
-  background: 
+  background:
     linear-gradient(#FFEFF7, #FFEFF7) padding-box,
     linear-gradient(to right, #FFC3DF, #AAD2E9) border-box;
 }
 
 /* ---------- Banner ---------- */
-.banner{
-    margin-top: 180px;
+
+.banner {
+  width: 90%;
+  margin: 100px auto 0;
+  height: 400px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #AAD2E9, #FFC3DF, #BAE5A2);
+  position: relative;
+  /* necessário para posicionar os elementos absolutos */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 40px;
+}
+
+/* Texto */
+.banner-content {
+  color: #fff;
+  font-size: poppins;
+  z-index: 2;
+  /* fica acima das imagens */
+  max-width: 40%;
+  padding: 40px 80px;
+  /* aumenta espaço lateral (direita e esquerda) */
+  position: absolute;
+}
+
+.banner-content h1 {
+  font-size: 28px;
+  text-align: center;
+  font-weight: 800;
+  color: #CC4661;
+  margin-bottom: 12px;
+}
+
+.banner-content h2 {
+  font-size: 60px;
+  font-weight: 500;
+  margin-bottom: 50px;
+}
+
+.banner-content p {
+  background: #e61085;
+  color: #fff;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 20px;
+  display: inline-block;
+  font-size: 14px;
+}
+
+/* Melancia */
+.img-melancia {
+  position: absolute;
+  right: 20px;
+  bottom: 5px;
+  height: 100px;
+}
+
+/* Laranja */
+.img-laranja {
+  position: absolute;
+  top: -47px;
+  /* gruda no topo */
+  left: 30px;
+  /* gruda na esquerda */
+  height: 120px;
+  /* aumenta o tamanho */
+}
+
+/* Sorvete principal */
+.img-sorvete1 {
+  position: absolute;
+  right: 650px;
+  bottom: -1px;
+  height: 200px;
+}
+
+/* Milkshake */
+.img-sorvete2 {
+  position: absolute;
+  right: 400px;
+  bottom: 60px;
+  height: 350px;
+}
+
+/* Setas */
+.seta-esquerda,
+.seta-direita {
+  position: absolute;
+  top: 50%;
+  padding: 10px;
+  width: 60px;
+  height: 60px;
+}
+
+.seta-esquerda {
+  left: 15px;
+}
+
+.seta-direita {
+  right: 15px;
+}
+
+.process {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.process h3 {
+  font-size: 28px;
+  color: #3CA57C;
+  margin-bottom: 10px;
+}
+
+.process p {
+  font-size: 18px;
+  color: #000000;
+  margin-bottom: 40px;
+}
+
+.process-step {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  /* espaço entre os blocos */
+}
+
+/* Cada bloco (step) */
+.step {
+  display: flex;
+  align-items: center;
+  /* alinha texto verticalmente com a imagem */
+  justify-content: space-between;
+  gap: 40px;
+  /* espaço entre imagem e texto */
+}
+
+/* Zigue-zague: inverte os pares */
+.step:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+/* Imagem (container) */
+.step-img {
+  flex: 1;
+  position: absolute;
+  /* necessário para o posicionamento funcionar */
+  max-width: 500px;
+  /* limite da largura da imagem */
+  border-radius: 12px;
+  overflow: hidden;
+  display: inline-block;
+}
+
+/* Imagem em si */
+.step-img img {
+  width: 100%;
+  height: 300px;
+  /* altura padronizada */
+  object-fit: cover;
+  /* corta mantendo proporção */
+  border-radius: 12px;
+}
+
+/* Destaque verde */
+.step-description p.p-step1 {
+  color: #25eb35;
+  font-weight: 600;
+}
+
+/* Destaque laranja */
+.step-description p.p-step2 {
+  color: #e75c0c;
+  font-weight: 600;
+}
+
+/* Destaque azul */
+.step-description p.p-step3 {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+/* Destaque rosa */
+.step-description p.p-step4 {
+  color: #e61085;
+  font-weight: 600;
+}
+
+/* Texto ao lado */
+.step-description {
+  flex: 1;
+  text-align: left;
+}
+
+.step-description h4 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.step-description p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.step-img {
+  position: relative;
+  /* necessário para o posicionamento funcionar */
+  display: inline-block;
+}
+
+.step-img p {
+  position: absolute;
+  top: -5px;
+  /* sobe um pouco pra ficar meio dentro, meio fora */
+  left: 5px;
+  background: #2563eb;
+  /* azul */
+  color: #fff;
+  /* texto branco */
+  font-size: 14px;
+  font-weight: 600;
+  padding: 6px 14px;
+  /* espaço interno */
+  border-radius: 20px;
+}
+
+/* deixa arredondado (cápsula) */
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .step {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .step-img {
+    width: 100%;
+  }
+
+  .step-description {
+    margin-top: 20px;
+  }
+}
+
+/* ---------- Sabores ---------- */
+
+.flavors {
+  text-align: center;
+  padding: 60px 20px;
+  background: #ffffff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.flavors h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #E39BB2;
+  /* rosa claro igual ao modelo */
+}
+
+.flavors p {
+  font-size: 1rem;
+  color: #000000;
+  margin-bottom: 40px;
+}
+
+/* Lista de sabores */
+.flavor-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 60px;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.flavor-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.flavor-text h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.flavor-text p {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Imagem */
+.flavor-item img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+/* Cores por sabor */
+.pistache {
+  color: #008521;
+}
+
+/* verde */
+.chocolate {
+  color: #5A3A29;
+}
+
+/* marrom */
+.morango {
+  color: #E63946;
+}
+
+/* vermelho */
+.limao {
+  color: #76B041;
+}
+
+/* verde limão */
+.manga {
+  color: #F4A261;
+}
+
+/* laranja */
+.banana {
+  color: #E9C46A;
+}
+
+/* amarelo */
+.acai {
+  color: #6A0572;
+}
+
+/* roxo */
+.cupuacu {
+  color: #B5651D;
+}
+
+/* marrom cupuaçu */
+.nutella {
+  color: #4E342E;
+}
+
+/* marrom escuro */
+
+/* Responsividade */
+@media (max-width: 992px) {
+  .flavor-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .flavor-list {
+    grid-template-columns: 1fr;
+  }
+
+  .flavor-item {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.flavor-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 15px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+/* Interação ao passar o mouse */
+.flavor-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  background: #fafafa;
+}
+
+/* ---------- Nossa Jornada ---------- */
+
+.about {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.about-title {
+  padding: 60px 20px;
+  background: linear-gradient(to left, #FDFAD3, #FFDBEC);
+  position: relative;
+}
+
+/* Título principal */
+.about-title h2 {
+  font-size: 32px;
+  color: #000000;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.about-img {
+  position: absolute;
+  bottom: 0px;
+  z-index: 1;
+  /* distância do topo */
+  right: 120px;
+  /* distância da direita */
+  width: 250px;
+  /* tamanho da imagem */
+  height: auto;
+  pointer-events: none;
+  /* não atrapalha cliques no conteúdo */
+}
+
+.about-title p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* Origem */
+.origin {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.origin h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #275965;
+}
+
+.origin p {
+  font-size: 15px;
+  color: #000000;
+  max-width: 800px;
+  margin: 0 auto 60px auto;
+  line-height: 1.6;
+}
+
+/* Jornada */
+.journey {
+  background: linear-gradient(to right, #fef3f8, #fff9f4);
+  padding: 60px 20px;
+  border-radius: 20px;
+}
+
+.journey h3 {
+  font-size: 24px;
+  color: #CC4661;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+/* Cada card da jornada */
+.card-journey {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 700px;
+  background: #ffffff;
+  margin: 20px auto;
+  padding: 20px 25px;
+  border-radius: 18px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.671);
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.card-journey:hover {
+  transform: translateY(-3px);
+}
+
+.card-journey img {
+  width: 48px;
+  height: 48px;
+}
+
+.card-line h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #275965;
+  margin-bottom: 8px;
+}
+
+.card-line h4 span {
+  color: #275965;
+  margin-right: 8px;
+}
+
+.card-line p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.4;
+}
+
+.card-line h4 .year {
+  display: inline-block;
+  padding: 4px 12px;
+  background: #fff;
+  border: 1px solid #1d6f93;
+  border-radius: 20px;
+  font-weight: bold;
+  color: #1d6f93;
+  font-size: 14px;
+  margin-right: 10px;
 }
 
 /* ---------- Depoimentos ---------- */
@@ -145,8 +663,8 @@ header {
   transition: transform 0.3s ease;
 }
 
-.feedback-card .img-feedback{
-    width: 100px;
+.feedback-card .img-feedback {
+  width: 100px;
 }
 
 .feedback-card:hover {
@@ -179,7 +697,7 @@ header {
 }
 
 /* Footer do depoimento */
-.testimonials > p:last-of-type {
+.testimonials>p:last-of-type {
   font-size: 16px;
   margin-top: 40px;
   margin-bottom: 15px;
@@ -222,10 +740,10 @@ header {
   padding: 40px;
   width: 500px;
   text-align: center;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   z-index: 2;
 
-  background: 
+  background:
     linear-gradient(#fff, #fff) padding-box,
     linear-gradient(to right, #FFC3DF, #AAD2E9) border-box;
 }
@@ -304,11 +822,11 @@ header {
 .contact-whatsapp a {
   display: flex;
   flex-direction: row;
-  align-items: center;          
-  gap: 8px;                     
+  align-items: center;
+  gap: 8px;
   background: #25d366;
   color: #fff;
-  border-radius: 25px;          
+  border-radius: 25px;
   padding: 10px 20px;
   font-size: 14px;
   font-weight: 500;
@@ -331,6 +849,275 @@ header {
   right: 0;
   width: 350px;
   z-index: 1;
+}
+
+/* ---------- Douglas ---------- */
+.team {
+  background: linear-gradient(to bottom, #c7e4f3, #f8d6f2);
+  padding: 60px 20px;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+}
+
+.team h3 {
+  font-size: 26px;
+  color: #23354d;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.team h3 strong {
+  color: #23354d;
+}
+
+.team p {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.member-card {
+  background: #e7e9f0;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  padding: 20px 25px;
+  max-width: 700px;
+  gap: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.member-card.reverse {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.member-card.reverse .member-description {
+  text-align: left;
+}
+
+.member-img {
+  text-align: center;
+  position: relative;
+  width: 60%;
+}
+
+.member-img img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 8px;
+}
+
+.badge {
+  padding: 4px 10px;
+  font-size: 10px;
+  border-radius: 12px;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  z-index: 1;
+}
+
+.badge-orange {
+  background-color: #f47c44;
+}
+
+.badge-pink {
+  background-color: #e870a4;
+}
+
+.member-description h4 {
+  font-size: 18px;
+  color: #2f2f2f;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.member-description .master-clara {
+  font-size: 14px;
+  color: #EA580C;
+  margin: 0 0 10px;
+  font-weight: 600;
+}
+
+.member-description .master-joao {
+  font-size: 14px;
+  color: #e870a4;
+  margin: 0 0 10px;
+  font-weight: 600;
+}
+
+.member-description p {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* ---------- Jheniffer ---------- */
+
+.process {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.process h3 {
+  font-size: 28px;
+  color: #3CA57C;
+  margin-bottom: 10px;
+}
+
+.process p {
+  font-size: 18px;
+  color: #000000;
+  margin-bottom: 40px;
+}
+
+.process-step {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* Cada bloco (step) */
+.step {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* Zigue-zague: inverte os pares */
+.step:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.step-img-wrapper {
+  position: relative;
+  display: inline-block;
+  max-width: 500px;
+}
+
+/* Texto (fora da imagem) */
+.step-img-wrapper .tag {
+  position: absolute;
+  top: -15px;
+  left: 10px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin: 0;
+  z-index: 1;
+}
+
+.step-img-wrapper .tag-1 {
+  background: #1ebe5d;
+}
+
+.step-img-wrapper .tag-2 {
+  background: #e75c0c;
+}
+
+.step-img-wrapper .tag-3 {
+  background: #2563eb;
+}
+
+.step-img-wrapper .tag-4 {
+  background: #e61085;
+}
+
+.step-img {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.step-img img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+.step-description p.p-step1 {
+  color: #1ebe5d;
+  font-weight: 600;
+}
+
+.step-description p.p-step2 {
+  color: #e75c0c;
+  font-weight: 600;
+}
+
+.step-description p.p-step3 {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.step-description p.p-step4 {
+  color: #e61085;
+  font-weight: 600;
+}
+
+.step-description {
+  flex: 1;
+  text-align: left;
+}
+
+.step-description h4 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.step-description p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .step {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .step-img {
+    width: 100%;
+  }
+
+  .step-description {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .step-img p {
+    top: -15px;
+    left: 8px;
+    font-size: 12px;
+    padding: 5px 12px;
+  }
 }
 
 /* ---------- Footer ---------- */
@@ -583,4 +1370,3 @@ footer {
     border: none;
   }
 }
-
