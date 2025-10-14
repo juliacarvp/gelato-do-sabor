@@ -1531,8 +1531,20 @@ footer {
     }
 
     .newsletter-button {
-        display: flex;
         flex-direction: column;
+        max-width: 100%;
+    }
+    
+    .newsletter-button input,
+    .newsletter-button button {
+        border-radius: 25px;
+        border-right: 2px solid #AAD2E9;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    
+    .newsletter-button button {
+        border: none;
     }
 }
 
@@ -1627,4 +1639,5 @@ footer {
         height: 26px;
     }
 }
+
 
