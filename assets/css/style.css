@@ -1276,10 +1276,6 @@ footer {
     background-color: #90c4e0;
 }
 
-.newsletter button:hover {
-    background-color: #e2508d;
-}
-
 .newsletter p {
     font-size: 0.9rem;
     color: #555;
@@ -1532,19 +1528,20 @@ footer {
 
     .newsletter-button {
         flex-direction: column;
-        max-width: 100%;
+        align-items: center;
+        max-width: 90%;
     }
-    
-    .newsletter-button input,
-    .newsletter-button button {
+
+    .newsletter-button input {
+        width: 100%;
         border-radius: 25px;
         border-right: 2px solid #AAD2E9;
         margin-bottom: 10px;
-        width: 100%;
     }
-    
+
     .newsletter-button button {
-        border: none;
+        width: 100%;
+        border-radius: 25px;
     }
 }
 
@@ -1639,5 +1636,3 @@ footer {
         height: 26px;
     }
 }
-
-
