@@ -1530,9 +1530,9 @@ footer {
         align-items: center;
     }
 
-    .newsletter input,
-    .newsletter button {
-        max-width: 100%;
+    .newsletter-button {
+        display: flex;
+        flex-direction: column;
     }
 }
 
@@ -1627,3 +1627,4 @@ footer {
         height: 26px;
     }
 }
+
