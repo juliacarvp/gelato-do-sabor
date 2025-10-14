@@ -1,16 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Gelato do Sabor</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gelato do Sabor | Sorvetes Artesanais</title>
+    <meta name="description" content="Gelato do Sabor — sorvetes artesanais feitos com ingredientes naturais e receitas de família desde 1985. Conheça nossos sabores e promoções.">
+
+    <link rel="stylesheet" href="assets/css/style2.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Caprasimo&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/logo.png">
 </head>
 
 <body>
@@ -22,6 +26,7 @@
         </div>
 
         <div class="nav">
+            <p class="closebtn" onclick="closeNav()">X</p>
             <nav class="navbar">
                 <ul class="nav-links">
                     <li><a href="#home">Início</a></li>
@@ -36,208 +41,237 @@
             <button class="button-contact" type="button">Contato</button>
         </div>
 
-        <!-- Ícone hamburguer -->
-        <div class="menu-toggle" style="display: none;">&#9776;</div>
+        <div class="menu" onclick="openNav()">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
     </header>
 
-    <!-- About Home -->
-    <section id="home" class="banner">
-        <div class="banner-content">
-            <h1>Gelato do Sabor</h1>
-            <h2>Sabores do Mês</h2>
-            <p>20% OFF</p>
-        </div>
-        <div class="banner-image">
-            <img src="assets/img/banner_melancia.png" alt="Melancia" class="img-melancia">
-            <img src="assets/img/banner_laranja.png" alt="Laranja" class="img-laranja">
-            <img src="assets/img/banner_sorvete1.png" alt="Sorvete 1" class="img-sorvete1">
-            <img src="assets/img/banner_sorvete2.png" alt="Sorvete 2" class="img-sorvete2">
-            <img src="assets/img/seta-esquerda.png" alt="seta-esquerda" class="seta-esquerda">
-            <img src="assets/img/seta-direita.png" alt="seta-direita" class="seta-direita">
-        </div>
-    </section>
-
-    <!-- About Flavors -->
-    <section id="flavors" class="flavors">
-        <h2>Sabores</h2>
-        <p>Utilizamos ingredientes 100% naturais e sem conservantes</p>
-
-        <div class="flavor-list">
-            <div class="flavor-item">
-                <div class="flavor-text">
-                    <h3 class="pistache">Pistache</h3>
-                    <p>Ingredientes: pistache torrado, creme de leite.</p>
+    <main>
+        <!-- Banner Rotativo -->
+        <section id="home" class="banner-main" aria-label="Promoções principais">
+            <!-- Banner Principal -->
+            <div class="banner-item banner-item-main">
+                <img src="assets/img/seta-esquerda.png" alt="" class="seta-esquerda">
+                <div class="banner-content banner-content-main">
+                    <div class="logo-banner">
+                        <img src="assets/img/logo.png" alt="Logo Gelato do Sabor">
+                        <h1>Gelato do Sabor</h1>
+                    </div>
+                    <h2>Aproveite nossas promoções e adoce o seu dia com muito sabor!</h2>
+                    <p>Peça já o seu!</p>
                 </div>
-                <img src="assets/img/pistache.jpg" alt="Sorvete de Pistache">
-            </div>
-
-            <div class="flavor-item">
-                <div class="flavor-text">
-                    <h3 class="chocolate">Chocolate Belga</h3>
-                    <p>Ingredientes: chocolate belga, creme de leite, leite.</p>
+                <div class="banner-image banner-image-main">
+                    <img src="assets/img/sorvete-banner.png" alt="Sorvete decorativo" class="img-sorvete">
+                    <img src="assets/img/promoção.png" alt="Promoção até 20% OFF" class="img-promocao">
                 </div>
-                <img src="assets/img/chocolate.jpg" alt="Sorvete Chocolate Belga">
+                <img src="assets/img/seta-direita.png" alt="" class="seta-direita">
             </div>
+        </section>
 
-            <div class="flavor-item">
-                <div class="flavor-text">
-                    <h3 class="morango">Morango</h3>
-                    <p>Ingredientes: morango fresco, creme de leite.</p>
+        <!-- Sabores -->
+        <section id="flavors" class="flavors">
+            <h2>Sabores</h2>
+            <p>Utilizamos ingredientes 100% naturais e sem conservantes</p>
+
+            <div class="flavor-list">
+                <div class="flavor-item">
+                    <div class="flavor-text">
+                        <h3 class="pistache">Pistache</h3>
+                        <p>Ingredientes: pistache torrado, creme de leite.</p>
+                    </div>
+                    <img src="assets/img/pistache.jpg" alt="Sorvete de Pistache">
                 </div>
-                <img src="assets/img/morango.jpg" alt="Sorvete de Morango">
-            </div>
 
-            <div class="flavor-item">
-                <div class="flavor-text">
-                    <h3 class="limao">Limão Siciliano</h3>
-                    <p>Ingredientes: suco de limão siciliano, raspas, água.</p>
+                <div class="flavor-item">
+                    <div class="flavor-text">
+                        <h3 class="chocolate">Chocolate Belga</h3>
+                        <p>Ingredientes: chocolate belga, creme de leite, leite.</p>
+                    </div>
+                    <img src="assets/img/chocolate.jpg" alt="Sorvete Chocolate Belga">
                 </div>
-                <img src="assets/img/limão.jpg" alt="Sorvete de Limão Siciliano">
-            </div>
 
-            <div class="flavor-item">
-                <div class="flavor-text">
-                    <h3 class="manga">Manga</h3>
-                    <p>Ingredientes: manga madura, creme de leite.</p>
+                <div class="flavor-item">
+                    <div class="flavor-text">
+                        <h3 class="morango">Morango</h3>
+                        <p>Ingredientes: morango fresco, creme de leite.</p>
+                    </div>
+                    <img src="assets/img/morango.jpg" alt="Sorvete de Morango">
                 </div>
-                <img src="assets/img/manga.jpg" alt="Sorvete de Manga">
-            </div>
 
-            <div class="flavor-item">
-                <div class="flavor-text">
-                    <h3 class="banana">Banana</h3>
-                    <p>Ingredientes: banana madura, creme de leite.</p>
+                <div class="flavor-item">
+                    <div class="flavor-text">
+                        <h3 class="limao">Limão Siciliano</h3>
+                        <p>Ingredientes: suco de limão siciliano, raspas, água.</p>
+                    </div>
+                    <img src="assets/img/limão.jpg" alt="Sorvete de Limão Siciliano">
                 </div>
-                <img src="assets/img/banana.jpg" alt="Sorvete de Banana">
-            </div>
 
-            <div class="flavor-item">
-                <div class="flavor-text">
-                    <h3 class="acai">Açaí</h3>
-                    <p>Ingredientes: polpa de açaí, banana, morango, xarope de guaraná.</p>
+                <div class="flavor-item">
+                    <div class="flavor-text">
+                        <h3 class="manga">Manga</h3>
+                        <p>Ingredientes: manga madura, creme de leite.</p>
+                    </div>
+                    <img src="assets/img/manga.jpg" alt="Sorvete de Manga">
                 </div>
-                <img src="assets/img/acai.jpg" alt="Sorvete de Açaí">
-            </div>
 
-            <div class="flavor-item">
-                <div class="flavor-text">
-                    <h3 class="cupuacu">Cupuaçu</h3>
-                    <p>Ingredientes: polpa de cupuaçu, leite, creme de leite.</p>
+                <div class="flavor-item">
+                    <div class="flavor-text">
+                        <h3 class="banana">Banana</h3>
+                        <p>Ingredientes: banana madura, creme de leite.</p>
+                    </div>
+                    <img src="assets/img/banana.jpg" alt="Sorvete de Banana">
                 </div>
-                <img src="assets/img/cupuacu.jpg" alt="Sorvete de Cupuaçu">
-            </div>
 
-            <div class="flavor-item">
-                <div class="flavor-text">
-                    <h3 class="nutella">Nutella Caseira</h3>
-                    <p>Ingredientes: pasta de avelã caseira, cacau, leite.</p>
+                <div class="flavor-item">
+                    <div class="flavor-text">
+                        <h3 class="acai">Açaí</h3>
+                        <p>Ingredientes: polpa de açaí, banana, morango, xarope de guaraná.</p>
+                    </div>
+                    <img src="assets/img/acai.jpg" alt="Sorvete de Açaí">
                 </div>
-                <img src="assets/img/nutella.jpg" alt="Sorvete de Nutella">
-            </div>
-        </div>
-    </section>
 
-    <!-- About Section -->
+                <div class="flavor-item">
+                    <div class="flavor-text">
+                        <h3 class="cupuacu">Cupuaçu</h3>
+                        <p>Ingredientes: polpa de cupuaçu, leite, creme de leite.</p>
+                    </div>
+                    <img src="assets/img/cupuacu.jpg" alt="Sorvete de Cupuaçu">
+                </div>
 
-    <section id="about" class="about">
-        <div class="about-title">
-            <h2>Nossa Historia</h2>
-            <p>Conheça a história da Gelato do Sabor e nossa paixão por sorvetes artesanais.</p>
-
-            <!-- Imagem decorativa -->
-            <img src="assets/img/sorvetinho.png" alt="Sorvete" class="about-img">
-        </div>
-
-
-        <div class="origin">
-            <h3>A Origem dos Nossos Sabores</h3>
-            <p>Fundada em 1985 pela família Silva, nossa sorveteria nasceu do sonho de criar sorvetes únicos e
-                especiais. Começamos com uma pequena máquina artesanal e receitas passadas de geração em geração. Hoje,
-                mantemos a mesma paixão e dedicação de sempre, usando apenas ingredientes naturais e frescos para
-                proporcionar momentos de felicidade em cada sabor.</p>
-        </div>
-
-        <!-- About Journey -->
-        <div class="journey">
-            <h3>Marcos da Nossa Jornada</h3>
-
-            <div class="card-journey">
-                <img src="assets/img/loja.png" alt="Primeira Loja">
-                <div class="card-line">
-                    <h4><span class="year">1985</span> Primeira Loja</h4>
-                    <p>Abertura da primeira sorveteria no centro da cidade com apenas 8 sabores artesanais.</p>
+                <div class="flavor-item">
+                    <div class="flavor-text">
+                        <h3 class="nutella">Nutella</h3>
+                        <p>Ingredientes: pasta de avelã caseira, cacau, leite.</p>
+                    </div>
+                    <img src="assets/img/nutella.jpg" alt="Sorvete de Nutella">
                 </div>
             </div>
+        </section>
 
-            <div class="card-journey">
-                <img src="assets/img/premio.png" alt="Primeiro Prêmio">
-                <div class="card-line">
-                    <h4><span class="year">1992</span> Primeiro Prêmio</h4>
-                    <p>Abertura da primeira sorveteria no centro da cidade com apenas 8 sabores artesanais.</p>
-                </div>
+        <!-- Nossa História -->
+        <section id="about" class="about">
+            <div class="about-title">
+                <h2>Nossa Historia</h2>
+                <p>Conheça a história da Gelato do Sabor e nossa paixão por sorvetes artesanais.</p>
+
+                <!-- Imagem decorativa -->
+                <figure>
+                    <img src="assets/img/sorvetinho.png" alt="Sorvete artesanal decorativo" class="about-img">
+                </figure>
             </div>
 
-            <div class="card-journey">
-                <img src="assets/img/plantar.png" alt="Ingredientes Orgânicos">
-                <div class="card-line">
-                    <h4><span class="year">2005</span> Ingredientes Orgânicos</h4>
-                    <p>Abertura da primeira sorveteria no centro da cidade com apenas 8 sabores artesanais.</p>
-                </div>
+            <div class="origin">
+                <h3>A Origem dos Nossos Sabores</h3>
+                <p>Fundada em 1985 pela família Silva, nossa sorveteria nasceu do sonho de criar sorvetes únicos e
+                    especiais. Começamos com uma pequena máquina artesanal e receitas de família, mantendo até hoje a
+                    mesma paixão e dedicação.</p>
             </div>
 
-            <div class="card-journey">
-                <img src="assets/img/fogos-de-artificio.png" alt="40 Anos">
-                <div class="card-line">
-                    <h4><span class="year">2025</span> 40 Anos</h4>
-                    <p>Celebração de 15 anos com mais de 50 sabores únicos e 3 lojas na cidade.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- About Team -->
-        <div class="team">
-            <h3>Conheça <strong>Quem Faz a Magia</strong></h3>
-            <p>As pessoas por trás de cada sabor especial</p>
-
-            <div class="member">
-                <!-- Sorveteira  -->
-                <div class="member-card">
-                    <div class="member-img">
-                        <img src="assets/img/sorveteira.jpg" alt="Dona Clara">
-                        <span class="badge badge-orange">Sorveteira</span>
+            <!-- Linha do tempo -->
+            <section class="journey">
+                <h3>Marcos da Nossa Jornada</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="icon">
+                            <img src="assets/img/loja.png" alt="Primeira Loja">
+                        </div>
+                        <div class="card-journey">
+                            <div class="card-line">
+                                <h4><span class="year">1985</span> Primeira Loja</h4>
+                                <p>Abertura da primeira sorveteria no centro da cidade com apenas 8 sabores artesanais.
+                                </p>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="member-description">
-                        <h4>Dona Clara</h4>
-                        <h5 class="master-clara">Sorveteira há 39 anos</h5>
-                        <p>"Comecei com uma receita da minha avó e um sonho. Hoje, cada sorvete que sai daqui carrega
-                            toda a paixão e experiência de quase quatro décadas dedicadas à arte de fazer felicidade."
-                        </p>
+                    <div class="timeline-item">
+                        <div class="icon">
+                            <img src="assets/img/premio.png" alt="Primeiro Prêmio">
+                        </div>
+                        <div class="card-journey">
+                            <div class="card-line">
+                                <h4><span class="year">1992</span> Primeiro Prêmio</h4>
+                                <p>Abertura da primeira sorveteria no centro da cidade com apenas 8 sabores artesanais.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="icon">
+                            <img src="assets/img/plantar.png" alt="Ingredientes Orgânicos">
+                        </div>
+                        <div class="card-journey">
+                            <div class="card-line">
+                                <h4><span class="year">2005</span> Ingredientes Orgânicos</h4>
+                                <p>Abertura da primeira sorveteria no centro da cidade com apenas 8 sabores artesanais.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="icon">
+                            <img src="assets/img/fogos-de-artificio.png" alt="40 Anos">
+                        </div>
+                        <div class="card-journey">
+                            <div class="card-line">
+                                <h4><span class="year">2025</span> 40 Anos</h4>
+                                <p>Comemoração de 15 anos e variados sabores únicos temos em 3 lojas em toda região.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </section>
 
-                <!-- Sorveteiro -->
-                <div class="member-card reverse">
-                    <div class="member-img">
-                        <img src="assets/img/sorveteiro.jpg" alt="João Silva">
-                        <span class="badge badge-pink">Sorveteiro</span>
+            <!-- Equipe -->
+            <section class="team">
+                <h3>Conheça <strong>Quem Faz a Magia</strong></h3>
+                <p>As pessoas por trás de cada sabor especial</p>
+
+                <div class="member">
+                    <!-- Sorveteira  -->
+                    <div class="member-card">
+                        <div class="member-img">
+                            <img src="assets/img/sorveteira.jpg" alt="Dona Clara">
+                            <span class="badge badge-orange">Sorveteira</span>
+                        </div>
+
+                        <div class="member-description">
+                            <h4>Dona Clara</h4>
+                            <h5 class="master-clara">Sorveteira há 39 anos</h5>
+                            <p>"Comecei com uma receita da minha avó e um sonho. Hoje, cada sorvete que sai daqui
+                                carrega
+                                toda a paixão e experiência de quase quatro décadas dedicadas à arte de fazer
+                                felicidade."
+                            </p>
+                        </div>
                     </div>
 
-                    <div class="member-description">
-                        <h4>João Silva</h4>
-                        <h5 class="master-joao">Mestre Sorveteiro • 45 anos</h5>
-                        <p>"Minha missão é transformar ingredientes simples em experiências inesquecíveis. Cada novo
-                            sabor é uma aventura, uma história contada através do paladar."</p>
+                    <!-- Sorveteiro -->
+                    <div class="member-card reverse">
+                        <div class="member-img">
+                            <img src="assets/img/sorveteiro.jpg" alt="João Silva">
+                            <span class="badge badge-pink">Sorveteiro</span>
+                        </div>
+
+                        <div class="member-description">
+                            <h4>João Silva</h4>
+                            <h5 class="master-joao">Mestre Sorveteiro • 45 anos</h5>
+                            <p>"Minha missão é transformar ingredientes simples em experiências inesquecíveis. Cada novo
+                                sabor é uma aventura, uma história contada através do paladar."</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </section>
+        </section>
 
-        <!-- About Process Step -->
-        <section>
+        <section class="process-section">
             <div class="process">
                 <h3>Nosso Processo Artesanal</h3>
-                <p>Da seleção dos ingredientes à criação dos sabores, cada etapa é feita<br> com cuidado e dedicação.
+                <p>Da seleção dos ingredientes à criação dos sabores, cada etapa é feita com cuidado e dedicação.
                 </p>
 
                 <div class="process-step">
@@ -269,8 +303,10 @@
                         </div>
                         <div class="step-description">
                             <h4>Receitas Tradicionais</h4>
-                            <p>Seguimos receitas passadas de geração em geração, aquecendo lentamente e misturando com
-                                precisão. Cada sabor tem seu tempo e temperatura ideais, respeitados religiosamente por
+                            <p>Seguimos receitas passadas de geração em geração, aquecendo lentamente e misturando
+                                com
+                                precisão. Cada sabor tem seu tempo e temperatura ideais, respeitados religiosamente
+                                por
                                 nossa equipe experiente.</p>
                             <p class="p-step2">✓ Receitas de Família há 39 Anos</p>
                         </div>
@@ -287,7 +323,8 @@
                         <div class="step-description">
                             <h4>Congelamento Artesanal</h4>
                             <p>Utilizamos máquinas italianas que trabalham em baixa velocidade, incorporando ar na
-                                medida certa para criar aquela textura cremosa única. O processo lento garante cristais
+                                medida certa para criar aquela textura cremosa única. O processo lento garante
+                                cristais
                                 de gelo microscópicos e consistência aveludada.</p>
                             <p class="p-step3">✓ Equipamentos Importados da Itália</p>
                         </div>
@@ -303,8 +340,10 @@
                         </div>
                         <div class="step-description">
                             <h4>Servido com Amor</h4>
-                            <p>Cada porção é servida na temperatura ideal, com utensílios aquecidos para não quebrar a
-                                cremosidade. Nossos atendentes são treinados para criar não apenas uma sobremesa, mas um
+                            <p>Cada porção é servida na temperatura ideal, com utensílios aquecidos para não quebrar
+                                a
+                                cremosidade. Nossos atendentes são treinados para criar não apenas uma sobremesa,
+                                mas um
                                 momento de felicidade.</p>
                             <p class="p-step4">✓ Atendimento Personalizado</p>
                         </div>
@@ -313,14 +352,14 @@
             </div>
         </section>
 
-        <!-- About Testimonials -->
+        <!-- Depoimentos -->
         <section id="testimonials" class="testimonials">
             <h2>Depoimentos</h2>
             <p>Palavras que nos inspiram a criar mais sabores</p>
 
             <div class="feedback">
-                <div class="feedback-card">
-                    <img class="img-feedback" src="assets/img/imagem-depoimentos.png" alt="">
+                <article class="feedback-card">
+                    <img class="img-feedback" src="assets/img/imagem-depoimentos.png" alt="Cliente sorrindo">
                     <h4>Gisele Almeida</h4>
                     <div class="star">
                         <img src="assets/img/estrela-cor.png" alt="Estrela">
@@ -329,12 +368,11 @@
                         <img src="assets/img/estrela-cor.png" alt="Estrela">
                         <img src="assets/img/estrela-cor.png" alt="Estrela">
                     </div>
+                    <p>“Sorvete maravilhoso, amei o de pistache! Indico muito.”</p>
+                </article>
 
-                    <p>Sorvete maravilhoso, amei o de pistache indico muito.</p>
-                </div>
-
-                <div class="feedback-card">
-                    <img class="img-feedback" src="assets/img/imagem-depoimentos.png" alt="">
+                <article class="feedback-card">
+                    <img class="img-feedback" src="assets/img/imagem-depoimentos.png" alt="Cliente sorridente">
                     <h4>Rosa Sebastiana</h4>
                     <div class="star">
                         <img src="assets/img/estrela-cor.png" alt="Estrela">
@@ -343,12 +381,11 @@
                         <img src="assets/img/estrela-cor.png" alt="Estrela">
                         <img src="assets/img/estrela-cor.png" alt="Estrela">
                     </div>
+                    <p>“Esse gelato é sensacional! Amo passar as tardes de domingo saboreando meu favorito.”</p>
+                </article>
 
-                    <p>Esse gelato e sensacional amo passar toda tarde de domingo e tomar o meu sorvete favorito.</p>
-                </div>
-
-                <div class="feedback-card">
-                    <img class="img-feedback" src="assets/img/imagem-depoimentos.png" alt="">
+                <article class="feedback-card">
+                    <img class="img-feedback" src="assets/img/imagem-depoimentos.png" alt="Cliente sorridente">
                     <h4>Nilza Roberta</h4>
                     <div class="star">
                         <img src="assets/img/estrela-cor.png" alt="Estrela">
@@ -357,27 +394,25 @@
                         <img src="assets/img/estrela-cinza.png" alt="Estrela">
                         <img src="assets/img/estrela-cinza.png" alt="Estrela">
                     </div>
-
-                    <p>O sorvete e bom e gostoso, mas achei muito doce e muito enjoativo.</p>
-                </div>
+                    <p>“O sorvete e bom e gostoso, mas achei muito doce e muito enjoativo.”</p>
+                </article>
             </div>
 
             <p>Já provou nossos sorvetes? Conte pra gente!</p>
             <button type="button">Enviar Depoimento</button>
         </section>
 
-        <!-- About Contact -->
+        <!-- Contato -->
         <section id="contact" class="contact">
             <div class="content-contact">
-                <img class="img-fixado" src="assets/img/fixado.png" alt="Icone Fixado">
+                <img class="img-fixado" src="assets/img/fixado.png" alt="Ícone de alfinete">
                 <h2>Fale Conosco</h2>
                 <p>Estamos prontos para atender você!</p>
 
-                <form action="">
-                    <input type="text" name="name" id="name" placeholder="Nome">
-                    <input type="email" name="email" id="email" placeholder="E-mail">
-                    <textarea name="text" id="text" placeholder="Mensagem"></textarea>
-
+                <form>
+                    <input type="text" name="name" placeholder="Nome" required>
+                    <input type="email" name="email" placeholder="E-mail" required>
+                    <textarea name="message" placeholder="Mensagem" required></textarea>
                     <div class="button-form">
                         <button type="submit">Enviar</button>
                     </div>
@@ -395,59 +430,57 @@
 
             <img class="img-conversa" src="assets/img/janela-de-conversa.png" alt="">
         </section>
+    </main>
 
-        <!-- About Footer -->
-        <footer>
-            <div class="line-pink"></div>
-            <div class="footer-content">
-                <div class="footer-info">
-                    <h2>Gelato do Sabor</h2>
+    <footer>
+        <div class="line-pink"></div>
 
-                    <ul class="info-links">
-                        <li><img src="assets/img/casa.png" alt="Endereço">R. das flores</li>
-                        <li><img src="assets/img/telefone.png" alt="Endereço">(11) 1234-5678</li>
-                        <li><img src="assets/img/e-mail.png" alt="Endereço">contato@gelatodosabor.com.br</li>
-                    </ul>
-                </div>
-
-                <div class="footer-nav">
-                    <h3>Menu</h3>
-                    <ul class="footer-links">
-                        <li><a href="#home">Início</a></li>
-                        <li><a href="#flavors">Sabores</a></li>
-                        <li><a href="#about">Nossa História</a></li>
-                        <li><a href="#testimonials">Depoimentos</a></li>
-                        <li><a href="#contact">Contato</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-container">
-                    <div class="footer-social">
-                        <h3>Redes Sociais</h3>
-
-                        <a href="#"><img src="assets/img/instagram.png" alt="Instagram"></a>
-                        <a href="#"><img src="assets/img/facebook.png" alt="Facebook"></a>
-                        <a href="#"><img src="assets/img/whatsapp.png" alt="Whatsapp"></a>
-                    </div>
-
-                    <div class="newsletter">
-                        <h3>Newsletter</h3>
-                        <div class="newsletter-button">
-                            <input type="email" name="newsletter" id="newsletter" placeholder="Seu e-mail">
-                            <button type="submit">Assinar</button>
-                        </div>
-                        <p>Inscreva-se para receber novidades e ofertas exclusivas!</p>
-                    </div>
-                </div>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h2>Gelato do Sabor</h2>
+                <ul>
+                    <li><img src="assets/img/e-mail.png" alt="Ícone de e-mail"> contato@gelatodosabor.com.br</li>
+                    <li><img src="assets/img/casa.png" alt="Ícone de endereço"> R. das Flores, 123</li>
+                    <li><img src="assets/img/telefone.png" alt="Ícone de telefone"> (11) 1234-5678</li>
+                </ul>
             </div>
 
-            <div class="restricted">
-                <p>© 2024 Gelato do Sabor. Todos os direitos reservados.</p>
+            <nav class="footer-nav" aria-label="Menu do rodapé">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#flavors">Sabores</a></li>
+                    <li><a href="#about">História</a></li>
+                    <li><a href="#testimonials">Depoimentos</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="footer-container">
+                <div class="footer-social">
+                    <h3>Redes Sociais</h3>
+                    <a href="#"><img src="assets/img/instagram.png" alt="Instagram"></a>
+                    <a href="#"><img src="assets/img/facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="assets/img/whatsapp.png" alt="WhatsApp"></a>
+                </div>
+
+                <form class="newsletter">
+                    <h3>Newsletter</h3>
+                    <div class="newsletter-button">
+                        <input type="email" name="newsletter" id="newsletter" placeholder="Seu e-mail">
+                        <button type="submit">Assinar</button>
+                    </div>
+                    <p>Inscreva-se para receber novidades e ofertas exclusivas!</p>
+                </form>
             </div>
+        </div>
 
-        </footer>
+        <div class="restricted">
+            <p>© 2025 Gelato do Sabor. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
-        <script src='assets/js/script.js'></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
